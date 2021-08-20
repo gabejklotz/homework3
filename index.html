@@ -1,0 +1,59 @@
+//this is not good will complete in two days 
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="script.js"></script>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- HTML for input on form  (https://stackoverflow.com/questions/48070987/how-to-get-user-input-from-javascript-form)-->
+
+
+<body>
+  <form>
+    <input type="text" id="input_id" value="">
+    <input type="button" value="Submit" onclick="getLength()" />
+    <input type="button" value="All-Lower-Case-Pass" onclick="makeBasePass()" />
+
+    <br> </br> 
+    <p id="alert">" "</p>
+  </form>
+
+
+  <!--(https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/)  -->
+  <form>
+    <input type="radio" name="uppercase" value="yes" id="choice_upper"> 
+    <label for="choice_upper">Uppercase?</label>
+    <input type="radio" name="numeric" value="no" id="choice_number">
+    <label for="choice_number">Numeric?</label>
+    <input type="radio" name="assorted_characters" value="no" id="choice_ascii">
+    <label for="choice_ascii">Assorted Characters?</label>
+    <button id="btn">Show Selected Value</button>
+  </form>
+
+  <div class="wrapper">
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+    <div class="card">
+      <div class="card-header">
+        <h2>Generate a Password</h2>
+      </div>
+      <div class="card-body">
+        <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
+      </div>
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
